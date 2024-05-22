@@ -1,0 +1,38 @@
+<div data-id="progress-parent" class="flex flex-row">
+  <div class="flex flex-row text-center gap-6 w-full">
+    <div class="relative my-3">
+      <div class="absolute top-0 w-1 h-full bg-gray-300"></div>
+      <div data-id="progress" class="absolute top-0 w-1 bg-[#C7B89F]"></div>
+    </div>
+    <div
+      class="flex flex-col items-start bg-white border-[#C7B89F] border-double border-4 rounded-sm px-4 py-6 my-4 mx-2 w-full"
+    >
+      <slot />
+    </div>
+  </div>
+</div>
+
+<script>
+  const p = document.querySelectorAll(
+    "[data-id=progress]"
+  ) as NodeListOf<HTMLDivElement>;
+  // const progress = document.querySelector("#progress") as HTMLDivElement;
+  // const parent = document.querySelector("#progress-parent") as HTMLDivElement;
+  const itinerary = document.querySelector("#itinerary") as HTMLDivElement;
+  // if (!progress) return;
+
+  window.addEventListener("scroll", () => {
+    p.forEach((progress: HTMLDivElement) => {
+      const parent = progress.parentElement?.parentElement
+        ?.parentElement as HTMLDivElement;
+      const scrollTop = window.scrollY;
+      const docHeight = itinerary.offsetTop + parent.offsetTop - 150;
+      const winHeight = parent.offsetHeight;
+      const scrollPercentage = ((scrollTop - docHeight) / winHeight) * 100;
+      if (scrollPercentage <= 100) {
+        progress.style.height = `${scrollPercentage}%`;
+      }
+      console.log({ scrollTop, docHeight, winHeight, scrollPercentage });
+    });
+  });
+</script>
