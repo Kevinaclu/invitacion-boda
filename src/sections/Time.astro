@@ -1,0 +1,39 @@
+---
+import Clock from "../components/Clock";
+import Song from "../components/Song";
+const eventDate = new Date(2024, 9, 5, 17, 30, 0);
+---
+
+<section
+  class="bg-white bg-[url(/perla2.jpg)] bg-top border-double border-y-8 border-[#A47E3B] relative"
+>
+  <div class="bg-white bg-opacity-50 w-full h-full absolute top-0"></div>
+  <div class="relative flex flex-col items-center p-8">
+    <p class="font-gloock text-2xl mb-8 leading-8">
+      Sábado 22 de Junio de 2024
+    </p>
+    <Clock targetDate={eventDate} />
+    <div class="my-8">
+      <Song />
+    </div>
+    <div class="flex flex-col justify-center text-center gap-6">
+      <p class="font-loversQuarrel text-3xl">
+        Con la bendición de Dios y la de
+      </p>
+      <p class="font-gloock text-2xl">NUESTROS PADRES</p>
+      <p class="font-baskerville text-2xl">NOVIA</p>
+      <p class="font-cormorant text-2xl">
+        Laura Martínez Puente <br />Juan José Hernández López
+      </p>
+      <p class="font-baskerville text-2xl">NOVIO</p>
+      <p class="font-cormorant text-2xl">
+        Nadia Núñez Ramírez <br />Ramiro Torres Garza
+      </p>
+      <p class="font-loversQuarrel text-6xl mt-4">
+        "Como llama divina es el fuego ardiente del amor. Ni las muchas aguas
+        pueden apagarlo, ni los ríos pueden extinguirlo" <br />(Cantares
+        8:6b-7a)
+      </p>
+    </div>
+  </div>
+</section>
