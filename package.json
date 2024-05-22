@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.5.10",
     "@astrojs/react": "^3.3.4",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/playfair-display": "^5.0.25",
     "@fontsource/cormorant-garamond": "^5.0.13",
     "@fontsource/gloock": "^5.0.20",
     "@fontsource/libre-baskerville": "^5.0.13",

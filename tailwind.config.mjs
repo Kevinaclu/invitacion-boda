@@ -10,6 +10,7 @@ export default {
         loversQuarrel: ["Lovers Quarrel", "cursive"],
         cormorant: ["Cormorant Garamond", "serif"],
         baskerville: ["Libre Baskerville", "serif"],
+        playfair: ["Playfair Display Variable", "serif"],
       },
     },
   },
