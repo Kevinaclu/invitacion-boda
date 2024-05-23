@@ -1,73 +1,39 @@
----
+<section id="main-carousel" class="splide" aria-label="My Awesome Gallery">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img class="w-full h-auto" src="/portada.jpg" alt="" />
+      </li>
+      <li class="splide__slide">
+        <img src="/portada.jpg" alt="" />
+      </li>
+      <li class="splide__slide">
+        <img src="/portada.jpg" alt="" />
+      </li>
+      <li class="splide__slide">
+        <img src="/portada.jpg" alt="" />
+      </li>
+    </ul>
+  </div>
+</section>
 
----
-
-<div class="pswp-gallery grid grid-cols-3" id="gallery">
-  <a
-    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
-    data-pswp-width="1669"
-    data-pswp-height="2500"
-    target="_blank"
-  >
-    <img
-      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
-      alt=""
-    />
-  </a>
-  <a
-    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
-    data-pswp-width="1669"
-    data-pswp-height="2500"
-    target="_blank"
-  >
-    <img
-      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
-      alt=""
-    />
-  </a>
-  <a
-    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
-    data-pswp-width="1669"
-    data-pswp-height="2500"
-    target="_blank"
-  >
-    <img
-      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
-      alt=""
-    />
-  </a>
-  <a
-    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
-    data-pswp-width="1669"
-    data-pswp-height="2500"
-    target="_blank"
-  >
-    <img
-      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
-      alt=""
-    />
-  </a>
-  <a
-    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
-    data-pswp-width="1669"
-    data-pswp-height="2500"
-    target="_blank"
-  >
-    <img
-      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
-      alt=""
-    />
-  </a>
-</div>
+<ul id="thumbnails" class="thumbnails flex flex-row justify-center gap-2">
+  <li class="thumbnail w-16">
+    <img src="/portada.jpg" alt="" />
+  </li>
+  <li class="thumbnail w-16">
+    <img src="/portada.jpg" alt="" />
+  </li>
+  <li class="thumbnail w-16">
+    <img src="/portada.jpg" alt="" />
+  </li>
+  <li class="thumbnail w-16">
+    <img src="/portada.jpg" alt="" />
+  </li>
+</ul>
 
 <script>
-  import PhotoSwipeLightbox from "photoswipe/lightbox";
-  import "photoswipe/style.css";
+  import Splide from "@splidejs/splide";
 
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: "#gallery",
-    children: "a",
-    pswpModule: () => import("photoswipe"),
-  });
-  lightbox.init();
+  new Splide(".splide").mount();
 </script>

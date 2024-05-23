@@ -1,7 +1,7 @@
 ---
 import Clock from "../components/Clock";
 import Song from "../components/Song";
-const eventDate = new Date(2024, 9, 5, 17, 30, 0);
+const eventDate = new Date(2024, 5, 21, 18, 0, 0);
 ---
 
 <section
@@ -12,7 +12,7 @@ const eventDate = new Date(2024, 9, 5, 17, 30, 0);
     <p class="font-gloock text-2xl mb-8 leading-8">
       Sábado 22 de Junio de 2024
     </p>
-    <Clock targetDate={eventDate} />
+    <Clock client:load targetDate={eventDate} />
     <div class="my-8">
       <Song />
     </div>
@@ -21,15 +21,15 @@ const eventDate = new Date(2024, 9, 5, 17, 30, 0);
         Con la bendición de Dios y la de
       </p>
       <p class="font-gloock text-2xl">NUESTROS PADRES</p>
-      <p class="font-baskerville text-2xl">NOVIA</p>
-      <p class="font-cormorant text-2xl">
-        Laura Martínez Puente <br />Juan José Hernández López
+      <p class="font-cormorant text-xl">
+        <span class="font-baskerville text-xl">NOVIA</span><br />
+        Cruz Eduardo Soto Ayala <br />Micaela Lopez Orduño
       </p>
-      <p class="font-baskerville text-2xl">NOVIO</p>
-      <p class="font-cormorant text-2xl">
-        Nadia Núñez Ramírez <br />Ramiro Torres Garza
+      <p class="font-cormorant text-xl">
+        <span class="font-baskerville text-xl">NOVIO</span><br />
+        Abelardo Acosta Montes <br />Ana Luisa Luna Ceballos
       </p>
-      <p class="font-loversQuarrel text-6xl mt-4">
+      <p class="font-loversQuarrel text-4xl mt-4">
         "Como llama divina es el fuego ardiente del amor. Ni las muchas aguas
         pueden apagarlo, ni los ríos pueden extinguirlo" <br />(Cantares
         8:6b-7a)

@@ -28,7 +28,7 @@ export default function Clock({ targetDate }: ClockProps) {
   }, []);
 
   return (
-    <div className="flex flex-row space-x-4">
+    <div className="flex flex-row space-x-4 xs:flex-col xs:space-x-0 xs:space-y-4">
       <ClockInfo difference={remainingDays} text="Días" />
       <ClockInfo difference={remainingHours} text="Horas" />
       <ClockInfo difference={remainingMinutes} text="Minutos" />
