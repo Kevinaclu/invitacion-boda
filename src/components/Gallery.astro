@@ -2,39 +2,84 @@
 import "@splidejs/splide/css/sea-green";
 
 const images = [
-  "/img/1.jpeg",
-  "/img/2.jpeg",
-  "/img/3.jpeg",
-  "/img/4.jpeg",
-  "/img/5.jpeg",
-  "/img/6.jpeg",
-  "/img/7.jpeg",
-  "/img/8.jpeg",
-  "/img/9.jpeg",
-  "/img/10.jpeg",
-  "/img/11.jpeg",
-  "/img/12.jpeg",
-  "/img/13.jpeg",
-  "/img/14.jpeg",
-  "/img/15.jpeg",
-  "/img/16.jpeg",
-  "/img/17.jpeg",
-  "/img/18.jpeg",
+  {
+    image: "/img/inicio.jpeg",
+    text: "This is how it began...",
+  },
+  {
+    image: "/img/2.jpeg",
+  },
+  {
+    image: "/img/13.jpeg",
+  },
+  {
+    image: "/img/19.jpeg",
+  },
+  {
+    image: "/img/22.jpeg",
+  },
+  {
+    image: "/img/23.jpeg",
+  },
+  {
+    image: "/img/21.jpeg",
+  },
+  {
+    image: "/img/20.jpeg",
+  },
+  {
+    image: "/img/3.jpeg",
+  },
+  {
+    image: "/img/4.jpeg",
+  },
+  {
+    image: "/img/14.jpeg",
+  },
+  {
+    image: "/img/11.jpeg",
+  },
+  {
+    image: "/img/9.jpeg",
+  },
+  {
+    image: "/img/16.jpeg",
+  },
+  {
+    image: "/img/17.jpeg",
+  },
+  {
+    image: "/img/18.jpeg",
+  },
+  {
+    image: "/img/6.jpeg",
+  },
+  {
+    image: "/img/7.jpeg",
+  },
+  {
+    image: "/img/8.jpeg",
+  },
+  {
+    image: "/img/5.jpeg",
+    text: "To be continued...",
+  },
 ];
 ---
 
 <div class="px-8">
   <section
     id="main-carousel"
-    class="splide bg-white shadow-lg rounded-lg"
+    class="splide"
     aria-label="The Beautiful Gallery carousel. Selecting a thumbnail will change this carousel."
   >
     <div class="splide__track">
       <ul class="splide__list">
         {
-          images.map((image) => (
+          images.map(({ image, text }) => (
             <li class="splide__slide">
-              <img src={image} alt="" />
+              <p class="font-loversQuarrel text-center text-4xl mb-2">{text}</p>
+              <img src={image} alt="" class="rounded-xl shadow-sm" />
             </li>
           ))
         }
@@ -50,7 +95,7 @@ const images = [
     <div class="splide__track">
       <ul class="splide__list">
         {
-          images.map((image) => (
+          images.map(({ image }) => (
             <li class="splide__slide">
               <img src={image} alt="" />
             </li>
@@ -66,6 +111,11 @@ const images = [
     width: 100%;
     height: 100%;
     object-fit: cover;
+    max-height: 400px;
+  }
+
+  #main-carousel {
+    padding: 0 !important;
   }
 
   .splide__slide {
@@ -97,8 +147,8 @@ const images = [
     focus: "center",
     breakpoints: {
       600: {
-        fixedWidth: 60,
-        fixedHeight: 44,
+        fixedWidth: 120,
+        fixedHeight: 80,
       },
     },
   });

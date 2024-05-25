@@ -16,8 +16,9 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add(
-            "animate-slide-in-left",
-            "animate-duration-1000"
+            "animate-fade-in-left",
+            "animate-duration-1000",
+            "animate-delay-100"
           );
         }
       });
