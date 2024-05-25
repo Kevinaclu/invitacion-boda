@@ -7,14 +7,13 @@
       class="bg-white border-double border-4 rounded-md border-[#A47E3B] p-8 w-full"
     >
       <p class="font-gloock text-center text-3xl mb-6">¡Estás invitado!</p>
-      <form class="flex flex-col" action="">
+      <form class="flex flex-col">
         <div class="flex justify-center mt-8 w-full">
           <input
             type="text"
             placeholder="Nombre"
             name="nombre"
             class="w-full"
-            required
           />
         </div>
         <div class="my-8">
@@ -32,7 +31,7 @@
         </div>
         <div class="mb-10">
           <textarea
-            class="w-full"
+            class="w-full p-4"
             rows="8"
             name="mensaje"
             id="mensaje"
@@ -41,7 +40,7 @@
         <input
           type="submit"
           value="Enviar"
-          class="font-sans text-lg px-4 py-2 bg-[#F6F4EB] rounded-full shadow-md"
+          class="font-sans text-md px-4 py-2 bg-[#F6F4EB] rounded-full shadow-md active:scale-90 transition-all"
         />
       </form>
     </div>
@@ -65,5 +64,10 @@
     });
     const data = await response.text();
     console.log(data);
+
+    if (data === "Comentario guardado") {
+      submitButton.value = "¡Gracias por tu confirmación!";
+      submitButton.disabled = true;
+    }
   });
 </script>
