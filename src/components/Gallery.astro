@@ -125,6 +125,18 @@ const images = [
   .splide__slide.is-active {
     opacity: 1;
   }
+
+  .custom-arrow svg {
+    fill: #a47e3b;
+  }
+
+  .custom-arrow:hover:not(:disabled) svg {
+    fill: #a47e3b;
+  }
+  .splide__track--nav > .splide__list > .splide__slide.is-active {
+    border: 3px solid #a47e3b;
+    opacity: 1;
+  }
 </style>
 
 <script>
@@ -150,6 +162,10 @@ const images = [
         fixedWidth: 120,
         fixedHeight: 80,
       },
+    },
+    classes: {
+      arrows: "splide__arrows your-class-arrows",
+      arrow: "splide__arrow custom-arrow",
     },
   });
 
