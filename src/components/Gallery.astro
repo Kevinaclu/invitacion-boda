@@ -1,24 +1,43 @@
 ---
 import "@splidejs/splide/css/sea-green";
+
+const images = [
+  "/img/1.jpeg",
+  "/img/2.jpeg",
+  "/img/3.jpeg",
+  "/img/4.jpeg",
+  "/img/5.jpeg",
+  "/img/6.jpeg",
+  "/img/7.jpeg",
+  "/img/8.jpeg",
+  "/img/9.jpeg",
+  "/img/10.jpeg",
+  "/img/11.jpeg",
+  "/img/12.jpeg",
+  "/img/13.jpeg",
+  "/img/14.jpeg",
+  "/img/15.jpeg",
+  "/img/16.jpeg",
+  "/img/17.jpeg",
+  "/img/18.jpeg",
+];
 ---
 
-<div>
+<div class="px-8">
   <section
     id="main-carousel"
-    class="splide p-8 bg-white shadow-lg rounded-md"
+    class="splide bg-white shadow-lg rounded-lg"
     aria-label="The Beautiful Gallery carousel. Selecting a thumbnail will change this carousel."
   >
     <div class="splide__track">
       <ul class="splide__list">
-        <li class="splide__slide">
-          <img src="/portada.jpg" alt="" />
-        </li>
-        <li class="splide__slide">
-          <img src="/d1.webp" alt="" />
-        </li>
-        <li class="splide__slide">
-          <img src="/fondo.jpg" alt="" />
-        </li>
+        {
+          images.map((image) => (
+            <li class="splide__slide">
+              <img src={image} alt="" />
+            </li>
+          ))
+        }
       </ul>
     </div>
   </section>
@@ -30,15 +49,13 @@ import "@splidejs/splide/css/sea-green";
   >
     <div class="splide__track">
       <ul class="splide__list">
-        <li class="splide__slide">
-          <img src="/portada.jpg" alt="" />
-        </li>
-        <li class="splide__slide">
-          <img src="/d1.webp" alt="" />
-        </li>
-        <li class="splide__slide">
-          <img src="/fondo.jpg" alt="" />
-        </li>
+        {
+          images.map((image) => (
+            <li class="splide__slide">
+              <img src={image} alt="" />
+            </li>
+          ))
+        }
       </ul>
     </div>
   </section>
@@ -77,6 +94,7 @@ import "@splidejs/splide/css/sea-green";
     rewind: true,
     pagination: false,
     isNavigation: true,
+    focus: "center",
     breakpoints: {
       600: {
         fixedWidth: 60,

@@ -20,6 +20,7 @@
     "@fontsource/gloock": "^5.0.20",
     "@fontsource/libre-baskerville": "^5.0.13",
     "@fontsource/lovers-quarrel": "^5.0.20",
+    "@midudev/tailwind-animations": "^0.0.7",
     "@splidejs/splide": "^4.1.4",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
