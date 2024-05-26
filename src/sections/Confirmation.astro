@@ -59,6 +59,8 @@
 
   submitButton.addEventListener("click", async (e) => {
     e.preventDefault();
+    submitButton.value = "Enviando...";
+    submitButton.disabled = true;
 
     const form = document.querySelector("form") as HTMLFormElement;
     const formData = new FormData(form);
