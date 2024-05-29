@@ -7,7 +7,7 @@ export const POST: APIRoute = async ({ request }) => {
   const asistir = data.get("asistir") as string;
   const mensaje = data.get("mensaje") as string;
 
-  if (!nombre || !asistir || !mensaje) {
+  if (!nombre || !asistir) {
     return new Response("Faltan campos", { status: 400 });
   }
 
